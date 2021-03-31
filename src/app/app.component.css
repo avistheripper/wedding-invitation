@@ -1,0 +1,38 @@
+body {
+    font-size: 10px;
+}
+
+
+.app-sheet {
+    background: url('../assets/bg-arc.png') center top no-repeat;
+}
+
+.left-figure {
+    position: absolute;
+    width: 10rem;
+    height: 23rem;
+    bottom: 15%;
+    right: 20%;
+    border-right: 2px solid #eeeeee;
+    border-bottom: 2px solid #eeeeee;
+}
+
+.right-figure {
+    height: 23rem;
+    width: 10rem;
+    position: absolute;
+    left: 20%;
+    border-top: 2px solid#eeeeee;
+    top: 10%;
+    border-left: 2px solid #eeeeee;
+}
+
+@media screen and (max-device-width: 953px) {
+    .left-figure, .right-figure {
+        display: none;
+    }
+}
+
+.app-sheet__main {
+    /* box-shadow: 8px 14px 30px 2px; */
+}

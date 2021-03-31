@@ -1,0 +1,69 @@
+.main-info {
+    padding-top: 27rem;
+    margin-bottom: 10rem;
+}
+
+@media screen and (max-device-width: 480px) {
+    .people, .date-wrapper {
+        font-size: 16pt;
+    }
+}
+.time {
+    text-align: center;
+    letter-spacing: 6px;
+    font-family: 'Playfair Display SC', serif;
+}
+.place {
+    text-align: center;
+    font-family: 'Crimson Text', serif;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+.place > p {
+    padding: 0;
+    margin: 0;
+    color: #515151;
+
+}
+ .people, .date-wrapper {
+    color: #515151;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 20pt;
+    letter-spacing: 6px;
+ }
+ .date-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.date-wrapper > span:first-of-type  {
+    border-right: 1px solid #515151;
+    padding-right: 2rem;
+}
+
+.date-wrapper > span:nth-of-type(2)  {
+    padding:0 2rem 0 2rem;
+}
+ 
+.date-wrapper > span:last-of-type  {
+    border-left: 1px solid #515151;
+    padding-left: 2rem;
+}
+
+h3 {
+    text-align: center;
+}
+
+p {
+    padding: 2rem 5rem;
+}
+
+@media screen and (max-device-width: 480px) {
+    .people, .date-wrapper {
+        font-size: 12pt;
+    }
+    p {
+        padding: 1rem 2rem;
+    }
+}

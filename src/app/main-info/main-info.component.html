@@ -1,0 +1,39 @@
+<div class="main-info" *ngIf="guestsList; else demo">
+    
+    <h3 class="people">{{ guestsList[0] }}
+        <span style="font-size: 10pt;text-transform: lowercase;">and</span>
+        {{ guestsList[1] }}
+    </h3>
+    <div class="date-wrapper">
+        <span>SUN</span>
+        <span>15</span>
+        <span>AUG</span>
+    </div>
+    <p class="time">03:00 <b>PM</b>  - 12:00 <b>AM</b> </p>
+    <div class="place">
+        <p style="letter-spacing: 4px;">restaurant <b>Novo</b></p>
+        <p>Nizhny Novgorod</p>
+        <p>Sloboda Pechery, 110A</p>
+    </div>
+</div>
+
+<ng-template #demo>
+    <div class="main-info">
+    <h3 class="people">Dear
+        <span style="font-size: 10pt;text-transform: lowercase;">and</span>
+        Beloved guest   
+    </h3>
+    <div class="date-wrapper">
+        <span>SUN</span>
+        <span>15</span>
+        <span>AUG</span>
+    </div>
+    <p class="time">03:00 <b>PM</b>  - 12:00 <b>AM</b> </p>
+    <div class="place">
+        <p style="letter-spacing: 4px;">restaurant <b>Novo</b></p>
+        <p>Nizhny Novgorod</p>
+        <p>Sloboda Pechery, 110A</p>
+    </div>
+</div>
+</ng-template>
+
