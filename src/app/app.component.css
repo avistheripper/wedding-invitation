@@ -30,7 +30,7 @@ body {
 @media screen and (max-device-width: 480px) {
     .bg-branch-2 {
         left: 0;
-        top: 228%;
+        top: 1800px;
         transform: rotate(182deg);
         position: absolute;
         background-image: url('../assets/pngegg.png');

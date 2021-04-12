@@ -6,7 +6,7 @@
       <div class="event-wrap">
         <div class="day">
           <h4 class="date">{{ day.date }}</h4>
-          <p class="ev-place"> {{ day.event }} <br> <b> {{ day.place }}</b></p>
+          <p class="ev-place"> {{ day.event }} <br> <b [innerHtml]="day.place"></b></p>
         </div>
         <ng-container *ngIf="day.event === 'Welcome party & Cocktails'; else mainDay">
           <div class="timeline-wrapper">
