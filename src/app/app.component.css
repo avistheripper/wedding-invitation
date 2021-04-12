@@ -47,6 +47,7 @@ body {
 
 .app-sheet {
     opacity: .9;
+    overflow-x: hidden;
     min-width: 400px;
     background: url('../assets/bg-new.png') center top no-repeat;
     background-color: #f4f4ea8a;
