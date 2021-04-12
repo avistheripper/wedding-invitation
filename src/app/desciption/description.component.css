@@ -1,3 +1,7 @@
+.desc-wrapper {
+
+}
+
 hr {
     height: 1px;
     background-color: #eeeeee;
@@ -23,6 +27,7 @@ hr {
     color: #464646;
     font-size: 1.5em;
     letter-spacing: 6.5px;
+    margin: 36px 0;
 }
 
 .date, .ev-place {
@@ -51,7 +56,7 @@ hr {
     position: absolute;
     content: " ";
     width: 3px;
-    background-color: #eeeeee;
+    background-color: #777272db;
   }
   .timeline > li {
     margin-bottom: 20px;
@@ -84,28 +89,6 @@ hr {
     padding: 20px;
     position: relative;
   }
-  /* .timeline > li > .timeline-panel:before {
-    position: absolute;
-    top: 26.5px;
-    right: -15px;
-    display: inline-block;
-    border-top: 15px solid transparent;
-    border-left: 15px solid #ccc;
-    border-right: 0 solid #ccc;
-    border-bottom: 15px solid transparent;
-    content: " ";
-  }
-  .timeline > li > .timeline-panel:after {
-    position: absolute;
-    top: 27px;
-    right: -14px;
-    display: inline-block;
-    border-top: 14px solid transparent;
-    border-left: 14px solid #fff;
-    border-right: 0 solid #fff;
-    border-bottom: 14px solid transparent;
-    content: " ";
-  } */
   .timeline > li > .timeline-badge {
     color: #eeeeee;
     width: 25px;
@@ -115,8 +98,7 @@ hr {
     text-align: center;
     position: absolute;
     top: 25px;
-    margin-left: -11.5px;
-    background-color: white;
+    margin-left: -33.5px;
     z-index: 100;
   }
   .timeline-title {
@@ -134,12 +116,16 @@ hr {
   .palette-box {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   .color-circle {
     display: block;
     height: 116px;
     width: 320px;
+  }
+  i {
+    color: #777272db
   }
 
   .blue {
@@ -151,6 +137,12 @@ hr {
 
   .green {
     background: url('../../assets/green-p.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .white {
+    background: url('../../assets/white-p.png');
     background-size: contain;
     background-repeat: no-repeat;
   }

@@ -2,9 +2,25 @@ body {
     font-size: 10px;
 }
 
+.bg-branch {
+    position: absolute;
+    background-image: url('../assets/pngegg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 400px;
+    min-height: 1000px;
+    opacity: .4;
+    left: 50%;
+}
+
+
 
 .app-sheet {
     background: url('../assets/bg-arc.png') center top no-repeat;
+    background-color: #f4f4ea8a;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
 }
 
 .left-figure {

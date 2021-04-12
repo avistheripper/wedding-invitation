@@ -6,7 +6,7 @@
       <div class="event-wrap">
         <div class="day">
           <h4 class="date">{{ day.date }}</h4>
-          <p class="ev-place"> {{ day.event }} <br> {{ day.place }}</p>
+          <p class="ev-place"> {{ day.event }} <br> <b> {{ day.place }}</b></p>
         </div>
         <ng-container *ngIf="day.event === 'Welcome party & Cocktails'; else mainDay">
           <div class="timeline-wrapper">
@@ -130,7 +130,7 @@
     </ng-container>
   </div>
   <hr>
-  <h3 class="title">WEDDING PALETTE</h3>
+  <h3 class="title">WEEDDING PALETTE</h3>
   <div class="palette-box"> 
     <div class="color-circle blue"></div>
     <div class="color-circle green"></div>
