@@ -11,7 +11,7 @@ export class DescriptionComponent implements OnInit {
     { 
       event: "Welcome party & Cocktails",
       date: "SATURDAY, AUGUST 14TH",
-      place: "Ulitsa Rodionova, 180, 'Pecherskie peski' Nizhny Novgorod" 
+      place: "'Pecherskie peski', Ulitsa Rodionova, 180,  Nizhny Novgorod" 
     },
     { 
       event: "Wedding ceremony",
