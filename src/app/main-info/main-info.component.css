@@ -1,6 +1,7 @@
 .main-info {
     padding-top: 27rem;
     margin-bottom: 10rem;
+    position: relative;
 }
 
 @media screen and (max-device-width: 480px) {
@@ -17,7 +18,6 @@
     text-align: center;
     font-family: 'Crimson Text', serif;
     font-size: 17px;
-    text-transform: uppercase;
 }
 .place > p {
     padding: 0;

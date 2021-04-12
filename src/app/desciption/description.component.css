@@ -1,11 +1,19 @@
 .desc-wrapper {
-
+  padding-left: 20px;
+  padding-bottom: 40px;
+  position: relative;
 }
 
 hr {
     height: 1px;
     background-color: #eeeeee;
     border: none;
+}
+
+.remark {
+  color: #4646464f;
+  font-family: 'Playfair Display SC', serif;
+  font-size: 14px;
 }
 
 .days-list {

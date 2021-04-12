@@ -7,15 +7,46 @@ body {
     background-image: url('../assets/pngegg.png');
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: right;
     min-width: 400px;
     min-height: 1000px;
     opacity: .4;
+}
+
+.bg-branch-2 {
+    top: 122%;
     left: 50%;
+    transform: rotate(182deg);
+    position: absolute;
+    background-image: url('../assets/pngegg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    min-width: 400px;
+    min-height: 1000px;
+    opacity: .4;
+}
+
+@media screen and (max-device-width: 480px) {
+    .bg-branch-2 {
+        left: 0;
+        top: 228%;
+        transform: rotate(182deg);
+        position: absolute;
+        background-image: url('../assets/pngegg.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+        min-width: 400px;
+        min-height: 1000px;
+        opacity: .4;
+    }
 }
 
 
 
 .app-sheet {
+    min-width: 375px;
     background: url('../assets/bg-arc.png') center top no-repeat;
     background-color: #f4f4ea8a;
     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),

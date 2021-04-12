@@ -18,7 +18,6 @@ export class MainInfoComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.queryParams.subscribe(params => {
       this.guestsList = params['guests']?.split('_')
-      console.log(this.guestsList);
       
       
   });
