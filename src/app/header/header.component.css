@@ -7,7 +7,7 @@
 .header {
     position: absolute;
     width: 100%;
-    top: 12rem;
+    top: 19rem;
 }
 
 h3 {
@@ -15,9 +15,9 @@ h3 {
     font-family: 'Parisienne', cursive;
     font-weight: normal;
     color: #464646;
-    font-size: 2em;
+    font-size: 3em;
     letter-spacing: 1.5px;
-    margin-top: 0px;
+    margin-top: 32px;
 
 }
 p {
