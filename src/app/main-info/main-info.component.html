@@ -1,5 +1,4 @@
 <div class="main-info" *ngIf="guestsList; else demo">
-    
     <h3 class="people" *ngIf="guestsList?.length > 1; else oneGuest">{{ guestsList[0] }}
         <span style="font-size: 10pt;text-transform: lowercase;">and</span>
         {{ guestsList[1] }}
@@ -8,17 +7,32 @@
         <h3 class="people">Dear {{ guestsList[0] }}
         </h3>
     </ng-template>
-    <div class="date-wrapper">
-        <span>SUN</span>
-        <span>15</span>
-        <span>AUG</span>
-    </div>
-    <p class="time">03:00 <b>PM</b>  - 12:00 <b>AM</b> </p>
-    <div class="place">
-        <p style="letter-spacing: 4px;">restaurant <b>NOVO</b></p>
-        <p>NIZHNIY NOVGOROD</p>
-        <p>Sloboda Pechery, 110A</p>
-    </div>
+    <ng-container *ngIf="!isTranslated; else rus">
+        <div class="date-wrapper">
+            <span>SUN</span>
+            <span>15</span>
+            <span>AUG</span>
+        </div>
+        <p class="time">03:00 <b>PM</b>  - 12:00 <b>AM</b> </p>
+        <div class="place">
+            <p style="letter-spacing: 4px;">restaurant <b>NOVO</b></p>
+            <p>NIZHNIY NOVGOROD</p>
+            <p>Sloboda Pechery, 110A</p>
+        </div>
+    </ng-container>
+    <ng-template #rus>
+        <div class="date-wrapper">
+            <span>Воскресенье</span>
+            <span>15</span>
+            <span>Августа</span>
+        </div>
+        <p class="time">15:00  - 24:00 </p>
+        <div class="place">
+            <p style="letter-spacing: 4px;">Ресторан <b>НОВО</b></p>
+            <p>Нижний Новгород</p>
+            <p>Слобода Печёры, 110A</p>
+        </div>
+    </ng-template>
 </div>
 
 <ng-template #demo>
@@ -27,7 +41,8 @@
         <span style="font-size: 10pt;text-transform: lowercase;">and</span>
         Beloved guest   
     </h3>
-    <div class="date-wrapper">
+
+    <div class="date-wrapper" >
         <span>SUN</span>
         <span>15</span>
         <span>AUG</span>

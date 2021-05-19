@@ -2,132 +2,207 @@
 <h3 class="title">WEDDING TIMELINE</h3>
 <div class="desc-wrapper">
   <div class="days-list">
-    <ng-container *ngFor="let day of daysList">
+    <ng-container *ngIf="isTranslated; else nonTranslated">
       <div class="event-wrap">
         <div class="day">
-          <h4 class="date">{{ day.date }}</h4>
-          <p class="ev-place"> {{ day.event }} <br> <b [innerHtml]="day.place"></b></p>
+          <h4 class="date">Воскресенье, 15 августа</h4>
+          <p class="ev-place"> Свадебная церемония<br> <b>
+            Нижний Новгород, ул. Слобода Печёры, 110А, Ресторан НОВО
+          </b></p>
         </div>
-        <ng-container *ngIf="day.event === 'Welcome party & Cocktails'; else mainDay">
-          <div class="timeline-wrapper">
-            <div class="container">
-              <ul class="timeline">
-                <li class="flex-start">
-                  <div class="timeline-badge"><i class="fas fa-glass-cheers"></i></div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">14:00</h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Guests assemble</p>
-                    </div>
+        <div class="timeline-wrapper">
+          <div class="container">
+            <ul class="timeline">
+              <li class="flex-start">
+                <div class="timeline-badge"><i class="fas fa-glass-cheers"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">15:00</h4>
                   </div>
-                </li>
-                <li>
-                  <div class="timeline-badge warning"><i class="fas fa-cocktail"></i>
+                  <div class="timeline-body">
+                    <p>Сбор гостей</p>
                   </div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">14:30</h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Cocktails/snacks time</p>
-                    </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-badge warning"><i class="fas fa-heart"></i>
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">15:30</h4>
                   </div>
-                </li>
-                <li class="flex-start">
-                  <div class="timeline-badge danger"><i class="fas fa-hamburger"></i></div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">17:00</h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Grill time</p>
-                    </div>
+                  <div class="timeline-body">
+                    <p>Церемония</p>
                   </div>
-                </li>
-                <li>
-                  <div class="timeline-badge warning"><i class="fas fa-music"></i>
+                </div>
+              </li>
+              <li class="flex-start">
+                <div class="timeline-badge danger"><i class="fas fa-camera"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">16:00</h4>
                   </div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">20:00</h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Dancing time</p>
-                    </div>
+                  <div class="timeline-body">
+                    <p>Свадебное фото</p>
                   </div>
-                </li>
-              </ul>
-            </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-badge warning"><i class="fas fa-utensils"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">17:00</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Празднование свадьбы</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-badge justify-content-start">
+                <div class="timeline-badge success"><i class="fas fa-cheese"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">21:30</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Время для "не торта"</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
-        </ng-container>
-        <ng-template #mainDay>
-          <div class="timeline-wrapper">
-            <div class="container">
-              <ul class="timeline">
-                <li class="flex-start">
-                  <div class="timeline-badge"><i class="fas fa-glass-cheers"></i></div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">15:00</h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Guests assemble</p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="timeline-badge warning"><i class="fas fa-heart"></i>
-                  </div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">15:30</h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Wedding ceremony</p>
-                    </div>
-                  </div>
-                </li>
-                <li class="flex-start">
-                  <div class="timeline-badge danger"><i class="fas fa-camera"></i></div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">16:00</h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Wedding photo</p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="timeline-badge warning"><i class="fas fa-utensils"></i></div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">17:00</h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Wedding celebration</p>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-badge justify-content-start">
-                  <div class="timeline-badge success"><i class="fas fa-cheese"></i></div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">21:30</h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Not a cake time</p>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </ng-template>
-      </div>
+        </div>
+        </div>
     </ng-container>
+    <ng-template #nonTranslated>
+      <ng-container *ngFor="let day of daysList">
+        <div class="event-wrap">
+          <div class="day">
+            <h4 class="date">{{ day.date }}</h4>
+            <p class="ev-place"> {{ day.event }} <br> <b [innerHtml]="day.place"></b></p>
+          </div>
+          <ng-container *ngIf="day.event === 'Welcome party & Cocktails'; else mainDay">
+            <div class="timeline-wrapper">
+              <div class="container">
+                <ul class="timeline">
+                  <li class="flex-start">
+                    <div class="timeline-badge"><i class="fas fa-glass-cheers"></i></div>
+                    <div class="timeline-panel">
+                      <div class="timeline-heading">
+                        <h4 class="timeline-title">14:00</h4>
+                      </div>
+                      <div class="timeline-body">
+                        <p>Guests assemble</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="timeline-badge warning"><i class="fas fa-cocktail"></i>
+                    </div>
+                    <div class="timeline-panel">
+                      <div class="timeline-heading">
+                        <h4 class="timeline-title">14:30</h4>
+                      </div>
+                      <div class="timeline-body">
+                        <p>Cocktails/snacks time</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex-start">
+                    <div class="timeline-badge danger"><i class="fas fa-hamburger"></i></div>
+                    <div class="timeline-panel">
+                      <div class="timeline-heading">
+                        <h4 class="timeline-title">17:00</h4>
+                      </div>
+                      <div class="timeline-body">
+                        <p>Grill time</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="timeline-badge warning"><i class="fas fa-music"></i>
+                    </div>
+                    <div class="timeline-panel">
+                      <div class="timeline-heading">
+                        <h4 class="timeline-title">20:00</h4>
+                      </div>
+                      <div class="timeline-body">
+                        <p>Dancing time</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </ng-container>
+          <ng-template #mainDay>
+            <div class="timeline-wrapper">
+              <div class="container">
+                <ul class="timeline">
+                  <li class="flex-start">
+                    <div class="timeline-badge"><i class="fas fa-glass-cheers"></i></div>
+                    <div class="timeline-panel">
+                      <div class="timeline-heading">
+                        <h4 class="timeline-title">15:00</h4>
+                      </div>
+                      <div class="timeline-body">
+                        <p>Guests assemble</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="timeline-badge warning"><i class="fas fa-heart"></i>
+                    </div>
+                    <div class="timeline-panel">
+                      <div class="timeline-heading">
+                        <h4 class="timeline-title">15:30</h4>
+                      </div>
+                      <div class="timeline-body">
+                        <p>Wedding ceremony</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex-start">
+                    <div class="timeline-badge danger"><i class="fas fa-camera"></i></div>
+                    <div class="timeline-panel">
+                      <div class="timeline-heading">
+                        <h4 class="timeline-title">16:00</h4>
+                      </div>
+                      <div class="timeline-body">
+                        <p>Wedding photo</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="timeline-badge warning"><i class="fas fa-utensils"></i></div>
+                    <div class="timeline-panel">
+                      <div class="timeline-heading">
+                        <h4 class="timeline-title">17:00</h4>
+                      </div>
+                      <div class="timeline-body">
+                        <p>Wedding celebration</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="timeline-badge justify-content-start">
+                    <div class="timeline-badge success"><i class="fas fa-cheese"></i></div>
+                    <div class="timeline-panel">
+                      <div class="timeline-heading">
+                        <h4 class="timeline-title">21:30</h4>
+                      </div>
+                      <div class="timeline-body">
+                        <p>Not a cake time</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </ng-template>
+        </div>
+      </ng-container>
+    </ng-template>
+
   </div>
   <hr>
   <h3 class="title">WEDDING PALETTE</h3>
@@ -136,19 +211,30 @@
     <div class="color-circle green"></div>
     <div class="color-circle white"></div>
   </div>
-  <h3 class="remark">
-    *Color palette is not mandatory, just recommended ☺ <br>
-    *Please, do not bring flowers <br>
-    *Event is "R-rated"
+  <h3 class="remark" *ngIf="isTranslated; else eng">
+    *Цветовая палитра необязательна, но рекомендована ☺ <br>
+    *Пожалуйста, не приносите цветов <br>
+    *Мероприятие 18+
   </h3>
+  <ng-template #eng>
+    <h3 class="remark">
+      *Color palette is not mandatory, just recommended ☺ <br>
+      *Please, do not bring flowers <br>
+      *Event is "R-rated"
+    </h3>
+  </ng-template>
+
+
   <div class="rsvp-wrapper">
     <h1 class="rsvp">RSVP</h1>
   </div>
   <div class="btn-box">
     <a class="rsvp-btn"
        href="mailto:bboyxns@mail.ru?subject=Positive%20RSVP%20%20from%20the%20invited">
-        Going
+        {{ isTranslated ? 'Иду' : 'Going' }}
       </a>
-    <a class="rsvp-btn" href="mailto:bboyxns@mail.ru?subject=Rejection%20RSVP%20%20from%20the%20invited">Can't come</a>
+    <a class="rsvp-btn" href="mailto:bboyxns@mail.ru?subject=Rejection%20RSVP%20%20from%20the%20invited">
+      {{isTranslated ? 'Не смогу пойти' : "Can't come"}}
+    </a>
   </div>
 </div>

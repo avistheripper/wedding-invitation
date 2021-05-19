@@ -7,19 +7,17 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./main-info.component.css']
 })
 export class MainInfoComponent implements OnInit {
-  guestsList: string[];
+  guestsList: string[] = [];
   lat = 51.678418;
   lng = 7.809007;
+  isTranslated: boolean;
 
-  constructor(private activatedRoute: ActivatedRoute) {
-
-  }
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.activatedRoute.queryParams.subscribe(params => {
-      this.guestsList = params['guests']?.split('_')
-      
-      
+      this.guestsList = params['guests']?.split('_');
+      this.isTranslated = this.guestsList && this.guestsList.includes("rus-en");
   });
   }
 

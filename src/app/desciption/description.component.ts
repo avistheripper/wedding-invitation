@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-description',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./description.component.css']
 })
 export class DescriptionComponent implements OnInit {
-
+  guestsList: Array<string> = [];
+  isTranslated: boolean;
   daysList = [
     { 
       event: "Welcome party & Cocktails",
@@ -26,9 +28,13 @@ export class DescriptionComponent implements OnInit {
     { text: 'Color #3', color: '#FFFAFA' }
   ]
 
-  constructor() { }
+  constructor( private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.activatedRoute.queryParams.subscribe(params => {
+      this.guestsList = params['guests']?.split('_');
+      this.isTranslated = this.guestsList && this.guestsList.includes("rus-en");
+  });
   }
 
 }
