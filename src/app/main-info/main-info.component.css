@@ -31,6 +31,9 @@
     font-size: 20pt;
     letter-spacing: 6px;
  }
+ .date-rus {
+     text-align: center;
+ }
  .date-wrapper {
     display: flex;
     justify-content: center;
