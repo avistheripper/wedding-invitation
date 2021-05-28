@@ -9,6 +9,23 @@
         font-size: 16pt;
     }
 }
+
+.time-rus {
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-align: center;
+}
+
+.place-rus {
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-align: center;
+    font-size: 17px;
+}
+
+.place-rus > p {
+    padding: 0;
+    margin: 0;
+    color: #515151;
+}
 .time {
     text-align: center;
     letter-spacing: 6px;

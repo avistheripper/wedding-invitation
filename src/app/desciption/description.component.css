@@ -38,11 +38,18 @@ hr {
     margin: 36px 0;
 }
 
+.ev-place-rus {
+  color: #515151;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 10pt;
+  letter-spacing: 1px;
+}
+
 .date, .ev-place {
     color: #515151;
     font-family: 'Playfair Display SC', serif;
     font-size: 10pt;
-    letter-spacing: 6px;
+    letter-spacing: 2px;
 }
 
 .flex-end {

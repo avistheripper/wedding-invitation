@@ -1,9 +1,9 @@
 <div class="app-sheet">
     <div class="app-sheet__main">
         <app-header></app-header>
-        <app-main-info></app-main-info>
+        <app-main-info [guestsList]="guestList" [isTranslated]="isTranslated"></app-main-info>
         <div class="bg-branch"></div>
-        <app-description></app-description>
-        <div class="bg-branch-2"></div>
+        <app-description [isTranslated]="isTranslated" [guestsList]="guestList"></app-description>
+        <div *ngIf="!isTranslated" class="bg-branch-2"></div>
     </div>
 </div>
