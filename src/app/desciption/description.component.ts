@@ -9,12 +9,12 @@ export class DescriptionComponent {
   @Input() guestsList: Array<string>;
   @Input() isTranslated: boolean;
   daysList = [
-    { 
+    {
       event: "Welcome party & Cocktails",
       date: "SATURDAY, AUGUST 14TH",
-      place: `'Pecherskie peski', Ulitsa Rodionova, 180, <br> Nizhny Novgorod`
+      place: `'Pecherskie peski', Grebnoy kanal Embankment, 107, <br> Nizhny Novgorod`
     },
-    { 
+    {
       event: "Wedding ceremony",
       date: "SUNDAY, AUGUST 15TH",
       place: `Restaurant NOVO, Sloboda Pechery, 110A, <br> Nizhny Novgorod`
